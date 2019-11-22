@@ -13,6 +13,8 @@ function corus_theme_scripts() {
 	//only load slick if singular. Optimize page load time.
 	if (is_singular()):
 		wp_enqueue_style('slick-styles', get_template_directory_uri() . '/components/slick-slider/slick.css');
+
+		//Enqueue slick-js to footer
 		wp_enqueue_script('slick-js', get_template_directory_uri() . '/components/slick-slider/slick.min.js', array(), false, true);
 	endif;
 }
