@@ -6,10 +6,16 @@
 /**
  * Enqueue scripts and styles.
  */
-function test_scripts() {
+function corus_theme_scripts() {
 	wp_enqueue_style( 'main-stylesheet', get_stylesheet_uri() );
+
+	//only load slick if singular. Optimize page load time.
+	if (is_singular()):
+		wp_enqueue_style('slick-styles', get_template_directory_uri() . '/components/slick-slider/slick.css');
+		wp_enqueue_script('slick-js', get_template_directory_uri() . '/components/slick-slider/slick.min.js', array(), false, true);
+	endif;
 }
-add_action( 'wp_enqueue_scripts', 'test_scripts' );
+add_action( 'wp_enqueue_scripts', 'corus_theme_scripts' );
 
 /*
  * Create gallery custom post type.
