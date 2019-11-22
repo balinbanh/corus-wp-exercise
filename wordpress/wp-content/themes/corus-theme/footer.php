@@ -8,8 +8,8 @@
 <?php
 wp_footer();
 
+//Only load if singular.
 if (is_singular()):
-
   ?>
   <script type="text/javascript">
   //compatability mode

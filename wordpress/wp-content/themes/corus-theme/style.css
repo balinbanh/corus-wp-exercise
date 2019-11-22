@@ -2,3 +2,9 @@
  Theme Name:   Corus WordPress Exercise
  Version:      1.0.2
 */
+
+/* Just so it's easier to look at */
+.slick-container {
+  margin: 0 auto;
+  max-width: 500px;
+}

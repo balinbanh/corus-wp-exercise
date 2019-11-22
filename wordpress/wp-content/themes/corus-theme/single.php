@@ -4,6 +4,8 @@
 */
 ?>
 
+<h1><?php the_title(); ?></h1>
+
 <?php
 // Slider Images
 $sliderImage1 = get_field('slider_image_1');
