@@ -8,6 +8,7 @@
  */
 function corus_theme_scripts() {
 	wp_enqueue_style( 'main-stylesheet', get_stylesheet_uri() );
+	wp_enqueue_script('jquery');
 
 	//only load slick if singular. Optimize page load time.
 	if (is_singular()):
